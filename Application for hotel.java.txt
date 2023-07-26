@@ -1,0 +1,98 @@
+import java.io.*;
+import java.util.*;
+class Main 
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println("welcome to nithis hotel, what do you want sir/madam");
+        System.out.println("press 1 to diaplay menu");
+        int total=0;
+        int idly=0;
+        int dosa=0;
+        int chapathi=0;
+        int chapathicost=0;
+        int omlet=0;
+        int omletcost=0;
+        int dosacost=0;
+        int parottacost=0;
+        int parotta=0;
+        int idlycost=0;
+        int menu=input.nextInt();
+        if(menu!=1)
+        {
+            System.out.println("thank you");
+        }
+        if(menu==1)
+        {
+           System.out.println("");
+            System.out.println("idly -rs10");
+            System.out.println("dosa-rs15");
+            System.out.println("parotta-rs15");
+            System.out.println("chapathi-rs12");
+            System.out.println("omlet-rs10");
+        }
+        System.out.println("press 1 to order");
+        int order = input.nextInt();
+        while(order==1)
+        {
+            System.out.println("what food do you want to have sir/madam");
+            System.out.println("if you want idly press 4"+'\n'+ "if you want dosa press 2"+'\n'+"if you  want parotta press 3"+'\n'+"if you want chapathi press 5"+'\n'+"if you want omlet press 6"+'\n');
+            int want = input.nextInt();
+            if(want==4)
+            {
+                System.out.println("how many idly needed sir/madam");
+                int idlies=input.nextInt();
+                idly = idly+ idlies;
+                idlycost = idly*10;
+                want =0;
+            }
+            if(want==2)
+            {
+                System.out.println("how many dosa needed sir/madam");
+                int dosas=input.nextInt();
+                dosa = dosa+ dosas;
+                dosacost = dosa*15;
+                want =0;
+            }
+            if(want==3)
+            {
+                System.out.println("how many parotta needed sir/madam");
+                int pars=input.nextInt();
+                parotta = parotta+ pars;
+                parottacost = parotta*15;
+                want =0;
+            }
+            if(want==5)
+            {
+                System.out.println("how many chapathis needed sir/madam");
+                int chapathis=input.nextInt();
+                chapathi = chapathi+chapathis;
+               chapathicost = chapathi*12;
+                want =0;
+            }
+            if(want==6)
+            {
+                 System.out.println("how many omlet needed sir/madam");
+                int omlets=input.nextInt();
+                omlet = omlet+ omlets;
+               omletcost= omlet*10;
+                want =0;
+                
+            }
+            System.out.println("to continue order press 1");
+            int con = input.nextInt();
+            order = con;
+           // int total=0;
+            
+        }
+        total = parottacost+dosacost+idlycost+chapathicost+omletcost;
+        System.out.println("item-idly  "+" quants ordered-"+idly+" cost-"+idlycost);
+        System.out.println("item-dosa  "+" quants ordered-"+dosa+" cost-"+dosacost);
+        System.out.println("item-parotta  "+" quants ordered-"+parotta+" cost-"+parottacost);
+        System.out.println("item-chapathi  "+"quants ordered-"+chapathi+" cost-"+chapathicost);
+        System.out.println("item-omlet  "+"quants ordered-"+omlet+" cost-"+omletcost);
+        
+        System.out.println("total cost-->"+total);
+    }
+}
